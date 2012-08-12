@@ -1,0 +1,183 @@
+@import 'bourbon/bourbon';
+
+/* apply a natural box layout model to all elements */
+* {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clear {
+	clear: both;
+	display: block;
+	float: none;
+}
+
+/* clearfix: http://www.webtoolkit.info/css-clearfix.html */
+.clearfix:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix {
+	display: block;
+}
+ 
+* html .clearfix {
+	height: 1%;
+}
+
+/* Finally, styles! */
+
+html {
+	color: #000000;
+	font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
+	min-height: 100%;
+
+	background-color: #cccccc;
+	@include linear-gradient(#ffffff, #cccccc);
+}
+
+body {
+	margin: 0 auto 8em auto;
+	padding: 0 1em;
+	position: relative;
+}
+
+header {
+	background-color: rgba(255, 255, 255, .8);
+	left: 0;
+	padding: 2em 1em 2em 0;
+	position: relative;
+	text-align: right;
+	top: 0;
+	width: 100%;
+	z-index: 2;
+	
+	h1, span {
+		display: block;
+		margin: 0 auto;
+	}
+	
+	h1 {
+		text-shadow: 1px 1px 4px #999999;
+	}
+	
+}
+
+body, header, header h1, header span {
+	width: 100%;
+}
+
+#about {
+	line-height: 150%;
+	padding: 1rem;
+	padding-top: 0;
+	
+	p:first-of-type {
+		margin-top: 0;
+	}
+	
+	img {
+		display: block;
+		float: left;
+		height: auto;
+		margin: 0 1em 1em 0;
+		width: 100%;
+		
+		box-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
+	}
+}
+
+
+.productions {
+	float: none;
+	width: 100%;
+
+	h3 {
+		background-color: #dddddd;
+		padding: .25em 1rem;
+		margin: 0;
+	}
+
+	.production {
+		background-color: rgba(255, 255, 255, 0.2);
+		padding: 1rem;
+		
+		&:hover {
+			background-color: rgba(255, 255, 255, 0.6);
+		}
+		
+		h4 {
+			margin: 0 0 .2em 0;
+		}
+		
+		ul {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+			
+			li {
+				label {
+					color: #999999;
+					display: inline-block;
+					width: 5em;
+				}
+			}
+		}
+	}
+}
+	
+#stage {
+	float: none;
+	width: 100%;
+		
+	img {
+		display: block;
+		position: absolute;
+		height: auto;
+		width: 100%;
+		z-index: 1;
+	}
+}
+
+@media only screen and (min-width : 481px) {
+	#about {
+		img {
+			width: 30%;
+		}
+	}
+
+	.productions {
+		float: left;
+		width: 35%;
+	}
+
+	#stage {
+		float: left;
+		position: relative;
+		width: 65%;
+	}
+}
+
+@media only screen and (min-width : 960px) {
+	body {
+		margin: 8em auto;
+	}
+
+	header {
+		position: fixed;
+	}
+	
+	body, header h1, header span {
+		width: 960px;
+	}
+}
