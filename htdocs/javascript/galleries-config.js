@@ -1,6 +1,6 @@
 var galleries_config = {
 	'hamlet2012' : {
-		'label' : 'Hamlet 2012',
+		'label' : 'Hamlet',
 		'images' : [
 			'http://lorempixel.com/960/540/people/?1',
 			'http://lorempixel.com/960/540/people/?2',
