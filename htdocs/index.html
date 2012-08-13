@@ -7,10 +7,16 @@
 	<meta name="description" content="">
 	<meta name="author" content="Marc-Oliver Teschke">
 	<meta name="viewport" content="width=320,initial-scale=1,user-scalable=yes">
-	<link rel="stylesheet" href="/min/b=stylesheets&f=normalize.css,font-awesome.css,screen.css">
+	<!--[if ! lte IE 6]><!-->
+		<link rel="stylesheet" href="/min/b=stylesheets&f=normalize.css,screen.css">
+	<!--<![endif]-->
+	<!--[if lte IE 6]>
+		<link rel="stylesheet" href="http://universal-ie6-css.googlecode.com/files/ie6.1.1.css" media="screen, projection">
+	<![endif]-->
 	<!--[if lt IE 9]>
 		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+	<script src="/javascript/respond.min.js"></script>
 </head>
 <body>
 	<header role="banner">
@@ -29,7 +35,7 @@
 			<h4>Hamlet</h4>
 			<ul>
 				<li><label>Rolle</label> Hamlet</li>
-				<li><label>Theater</label> Regenesis Studio</li>
+				<li><label>Theater</label> <a href="http://www.gesang-und-schauspiel.de/" target="_blank">Regenesis Studio</a></li>
 				<li><label>Regie</label> Orlando Schenk</li>
 			</ul>
 		</section>
@@ -38,7 +44,7 @@
 			<h4>Was ihr wollt</h4>
 			<ul>
 				<li><label>Rolle</label> Valentin, Antonio</li>
-				<li><label>Theater</label> Amateurtheaterverband NRW</li>
+				<li><label>Theater</label> <a href="http://www.amateurtheater-nrw.de/" target="_blank">Amateurtheaterverband NRW</a></li>
 				<li><label>Regie</label> Ulrich Schwarz</li>
 			</ul>
 		</section>
@@ -46,7 +52,7 @@
 			<h4>Eine Woche voller Samstage</h4>
 			<ul>
 				<li><label>Rolle</label> Herr Taschenbier</li>
-				<li><label>Theater</label> Unterfeldmäuse Erkrath</li>
+				<li><label>Theater</label> <a href="http://www.unterfeldmaeuse.de/" target="_blank">Unterfeldmäuse Erkrath</a></li>
 				<li><label>Regie</label> Manfred Teitge</li>
 			</ul>
 		</section>

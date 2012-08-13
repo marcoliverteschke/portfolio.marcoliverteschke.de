@@ -51,8 +51,7 @@ html {
 	font-family: 'Lato', 'Helvetica', 'Arial', sans-serif;
 	min-height: 100%;
 
-	background-color: #cccccc;
-	@include linear-gradient(#ffffff, #cccccc);
+	@include linear-gradient(#ffffff, #cccccc, $fallback: #cccccc);
 }
 
 body {
@@ -118,6 +117,14 @@ body, header, header h1, header span {
 		margin: 0;
 	}
 
+	a {
+		color: #000000;
+		
+		&:hover {
+			color: #F60;
+		}
+	}
+
 	.production {
 		background-color: rgba(255, 255, 255, 0.2);
 		padding: 1rem;
@@ -160,7 +167,11 @@ body, header, header h1, header span {
 
 	.productions {
 		float: left;
-		width: 35%;
+		width: 36%;
+		
+		.production {
+			cursor: pointer;
+		}
 	}
 
 	#stage {
@@ -168,7 +179,7 @@ body, header, header h1, header span {
 		float: left;
 		height: auto;
 		position: relative;
-		width: 65%;
+		width: 64%;
 		
 		img {
 			display: none;
