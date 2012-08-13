@@ -21,6 +21,7 @@ function Gallery()
 			if(_this.image_loaded())
 			{
 				_this.add_controls();
+				_this.add_label();
 				_this.show_image(_this.current_image);
 				_this.end_loading();
 			}
@@ -61,6 +62,11 @@ function Gallery()
 		});
 	}
 	
+	this.add_label = function()
+	{
+		$(this.target_selector).prepend('<h4 class="gallery-label">' + this.label + '</h4>');
+	}
+	
 	this.next_image = function()
 	{
 		this.current_image++;
@@ -83,6 +89,6 @@ function Gallery()
 	
 	this.destroy = function()
 	{
-		$(this.target_selector).find('img,a,div').remove();
+		$(this.target_selector).find('img,a,div,h4').remove();
 	}
 }

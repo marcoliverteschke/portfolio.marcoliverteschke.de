@@ -103,6 +103,7 @@ body, header, header h1, header span {
 		width: 100%;
 		
 		box-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
+		border-radius: .2em;
 	}
 }
 
@@ -149,42 +150,6 @@ body, header, header h1, header span {
 	display: none;
 }
 
-/* gallery */
-.gallery-loading, .gallery-controls {
-	background-color: rgba(0, 0, 0, .5);
-	color: #ffffff;
-	font-size: 6em;
-	position: absolute;
-	top: 1em;
-	z-index: 3;
-}
-
-.gallery-loading {
-	text-align: center;
-	width: 100%;
-}
-
-.gallery-controls {
-	@include border-radius(1em);
-	font-family: 'WebSymbolsRegular';
-	opacity: .25;
-	padding: .25em .5em;
-	text-decoration: none;
-	text-shadow: 1px 2px 4px #999999;
-	
-	&:hover {
-		opacity: 1;
-	}
-	
-	&.gallery-next {
-		right: 1rem;
-	}
-	
-	&.gallery-prev {
-		left: 1rem;
-	}
-}
-
 
 @media only screen and (min-width : 481px) {
 	#about {
@@ -201,6 +166,7 @@ body, header, header h1, header span {
 	#stage {
 		display: block;
 		float: left;
+		height: auto;
 		position: relative;
 		width: 65%;
 		
@@ -210,6 +176,54 @@ body, header, header h1, header span {
 			height: auto;
 			width: 100%;
 			z-index: 1;
+		}
+	}
+	
+	/* gallery */
+	.gallery-loading, .gallery-controls, .gallery-label {
+		background-color: rgba(0, 0, 0, .5);
+		color: #ffffff;
+		position: absolute;
+		z-index: 3;
+	}
+	
+	.gallery-loading, .gallery-controls {
+		font-size: 3em;
+		top: 2em;
+	}
+	
+	.gallery-label, .gallery-loading {
+		text-align: center;
+		width: 100%;
+	}
+
+	.gallery-label {
+		font-size: 1.17em;
+		font-weight: normal;
+		margin: 0;
+		opacity: .5;
+		padding: .25em .5em .25em 0;
+		text-align: right;
+	}
+
+	.gallery-controls {
+		@include border-radius(1em);
+		font-family: 'WebSymbolsRegular';
+		opacity: .25;
+		padding: .25em .5em;
+		text-decoration: none;
+		text-shadow: 1px 2px 4px #999999;
+	
+		&:hover {
+			opacity: 1;
+		}
+	
+		&.gallery-next {
+			right: 1rem;
+		}
+	
+		&.gallery-prev {
+			left: 1rem;
 		}
 	}
 }
@@ -225,5 +239,11 @@ body, header, header h1, header span {
 	
 	body, header h1, header span {
 		width: 960px;
+	}
+	
+	/* gallery */
+	.gallery-loading, .gallery-controls {
+		font-size: 6em;
+		top: 1em;
 	}
 }
