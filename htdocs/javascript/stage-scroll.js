@@ -1,10 +1,11 @@
 $(document).ready(function(){
-	var stage_position_top = $('#stage').offset().top;
-	var header_height = $('header[role="banner"]').outerHeight();
+	var stage_position_top = $('.stage').offset().top;
+	var header_height = 0;
 	var current_scroll_offset = 0;
 	var adjust_stage_position = 0;
 	
 	$(window).scroll(function(){
+		header_height = $('header[role="banner"]').outerHeight();
 		if($('header[role="banner"]').css('position') == 'fixed')
 		{
 			current_scroll_offset = $(document).scrollTop() + header_height + 16;
@@ -17,6 +18,6 @@ $(document).ready(function(){
 		} else {
 			adjust_stage_position = 0;
 		}
-		$('#stage').css('top', adjust_stage_position + 'px');
+		$('.stage').css('top', adjust_stage_position + 'px');
 	});
 });

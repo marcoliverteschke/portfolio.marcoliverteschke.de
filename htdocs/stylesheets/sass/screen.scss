@@ -60,6 +60,10 @@ body {
 	position: relative;
 }
 
+address {
+	font-style: normal;
+}
+
 header {
 	background-color: rgba(255, 255, 255, .8);
 	left: 0;
@@ -77,6 +81,11 @@ header {
 	
 	h1 {
 		text-shadow: 1px 1px 4px #999999;
+		
+		a {
+			color: #000000;
+			text-decoration: none;
+		}
 	}
 	
 }
@@ -85,7 +94,22 @@ body, header, header h1, header span {
 	width: 100%;
 }
 
-#about {
+footer {
+	ul, li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	li {
+		float: left;
+		margin-left: .25em;
+		margin-right: 1em;
+		margin-top: 2em;
+	}
+}
+
+.about {
 	line-height: 150%;
 	padding: 1rem;
 	padding-top: 0;
@@ -107,6 +131,17 @@ body, header, header h1, header span {
 }
 
 
+.production, footer {
+	a {
+		color: #000000;
+		
+		&:hover {
+			color: #F60;
+		}
+	}
+}
+
+
 .productions {
 	float: none;
 	width: 100%;
@@ -115,14 +150,6 @@ body, header, header h1, header span {
 		background-color: #dddddd;
 		padding: .25em 1rem;
 		margin: 0;
-	}
-
-	a {
-		color: #000000;
-		
-		&:hover {
-			color: #F60;
-		}
 	}
 
 	.production {
@@ -153,13 +180,28 @@ body, header, header h1, header span {
 	}
 }
 	
-#stage {
+.stage {
 	display: none;
+}
+
+.impressum {
+	ul, li {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	
+	li {
+		label {
+			display: inline-block;
+			width: 75px;
+		}
+	}
 }
 
 
 @media only screen and (min-width : 481px) {
-	#about {
+	.about {
 		img {
 			width: 30%;
 		}
@@ -174,7 +216,7 @@ body, header, header h1, header span {
 		}
 	}
 
-	#stage {
+	.stage {
 		display: block;
 		float: left;
 		height: auto;

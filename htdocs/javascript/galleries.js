@@ -26,6 +26,6 @@ function init_current_gallery()
 	current_gallery.id = current_gallery_id;
 	current_gallery.label = galleries_config[current_gallery_id].label;
 	current_gallery.images = galleries_config[current_gallery_id].images;
-	current_gallery.target_selector = '#stage';
+	current_gallery.target_selector = '.stage';
 	current_gallery.init();
 }
