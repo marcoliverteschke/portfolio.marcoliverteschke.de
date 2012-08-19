@@ -3,3 +3,6 @@ styles:
 
 local: styles
 	rsync --delete --exclude=sass -aP htdocs/ /Applications/MAMP/htdocs/portfolio
+
+install: styles
+	rsync --delete --exclude=sass -aP htdocs/ portfolio.marcoliverteschke.de@marcoliverteschke.de:htdocs
