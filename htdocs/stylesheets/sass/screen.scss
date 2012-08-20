@@ -33,6 +33,11 @@
 	box-sizing: border-box;
 }
 
+/* optimizeLegibility */
+* {
+	text-rendering: optimizeLegibility;
+}
+
 .clear {
 	clear: both;
 	display: block;
