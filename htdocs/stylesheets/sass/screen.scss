@@ -9,6 +9,23 @@
 		url('/fonts/websymbols-regular-webfont.svg#WebSymbolsRegular') format('svg');
 }
 
+/* Font sizes */
+/*
+	Base 8 / 10, multiplied with golden ratio 1.618, rounded
+	8 x 1,618
+	10 × 1,618
+	13 × 1,618
+	16 × 1,618
+	21 × 1,618
+	26 × 1,618
+	34 × 1,618
+	42 × 1,618
+	55 × 1,618
+	68 × 1,618
+	89 × 1,618
+	110 × 1,618
+*/
+
 /* apply a natural box layout model to all elements */
 * {
 	-moz-box-sizing: border-box;
@@ -80,6 +97,7 @@ header {
 	}
 	
 	h1 {
+		font-size: 2.125em; /* 34 / 16 */
 		text-shadow: 1px 1px 4px #999999;
 		
 		a {
@@ -130,7 +148,6 @@ footer {
 	}
 }
 
-
 .production, footer {
 	a {
 		color: #000000;
@@ -141,13 +158,13 @@ footer {
 	}
 }
 
-
 .productions {
 	float: none;
 	width: 100%;
 
 	h3 {
 		background-color: #dddddd;
+		font-size: 1.3125em; /* 21 / 16 */
 		padding: .25em 1rem;
 		margin: 0;
 	}
@@ -241,7 +258,7 @@ footer {
 	}
 	
 	.gallery-loading, .gallery-controls {
-		font-size: 3em;
+		font-size: 2.625em; /* 42 / 16 */
 		top: 2em;
 	}
 	
@@ -251,7 +268,7 @@ footer {
 	}
 
 	.gallery-label {
-		font-size: 1.17em;
+		font-size: 1.3125em; /* 21 / 16 */
 		font-weight: normal;
 		margin: 0;
 		opacity: .5;
@@ -296,7 +313,7 @@ footer {
 	
 	/* gallery */
 	.gallery-loading, .gallery-controls {
-		font-size: 6em;
+		font-size: 5.5625em; /* 89 / 16 */
 		top: 1em;
 	}
 }
