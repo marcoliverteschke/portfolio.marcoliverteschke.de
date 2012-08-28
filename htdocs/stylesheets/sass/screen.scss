@@ -132,10 +132,25 @@ footer {
 	}
 }
 
+.csshyphens {
+	.about, .impressum {
+		p {
+			text-align: justify;
+			-webkit-hyphens: auto;
+			-moz-hyphens: auto;
+			hyphens: auto;
+		}
+	}
+}
+
 .about {
 	line-height: 150%;
 	padding: 1rem;
 	padding-top: 0;
+	
+	p {
+	
+	}
 	
 	p:first-of-type {
 		margin-top: 0;
