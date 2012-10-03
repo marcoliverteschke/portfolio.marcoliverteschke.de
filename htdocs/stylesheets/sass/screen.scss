@@ -167,6 +167,23 @@ footer {
 		box-shadow: 1px 2px 3px rgba(0, 0, 0, 1);
 		border-radius: .2em;
 	}
+	
+	.stats {
+		&, li {
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+		
+		label:after {
+			content: ':';
+		}
+		
+		label {
+			display: inline-block;
+			width: 100px;
+		}
+	}
 }
 
 .production, footer {
@@ -182,6 +199,14 @@ footer {
 .productions {
 	float: none;
 	width: 100%;
+	
+	h1 {
+		background-color: #dddddd;
+		font-size: 1.3125em; /* 21 / 16 */
+		font-variant: small-caps;
+		padding: .25em 1rem;
+		margin: 0;
+	}
 
 	h3 {
 		background-color: #dddddd;
@@ -199,7 +224,7 @@ footer {
 		}
 		
 		h4 {
-			margin: 0 0 .2em 0;
+			margin: 0 0 .4em 0;
 		}
 		
 		ul {
@@ -211,6 +236,7 @@ footer {
 				label {
 					color: #999999;
 					display: inline-block;
+					margin: .1em 0;
 					width: 5em;
 				}
 			}
@@ -240,7 +266,7 @@ footer {
 
 @media only screen and (min-width : 481px) {
 	header h1 {
-		font-size: 5.5625em; /* 89 / 16 */
+		font-size: 4.25em; /* 68 / 16 */
 		letter-spacing: .05em;
 	}
 
@@ -258,8 +284,28 @@ footer {
 		float: left;
 		width: 36%;
 		
-		.production {
+		.has-images {
 			cursor: pointer;
+			
+			h4 {
+				display: inline-block;
+			}
+			
+			.gallery-indicator {
+				color: #999999;
+				display: inline-block;
+				padding-right: .5em;
+			}
+			.gallery-indicator:after {
+				content: 'I';
+				font-family: 'WebSymbolsRegular';
+			}
+			
+			&:hover {
+				.gallery-indicator {
+					color: #000000;
+				}
+			}
 		}
 	}
 
@@ -330,7 +376,7 @@ footer {
 
 @media only screen and (min-width : 960px) {
 	body {
-		margin: 11em auto;
+		margin: 9em auto;
 	}
 
 	header {
