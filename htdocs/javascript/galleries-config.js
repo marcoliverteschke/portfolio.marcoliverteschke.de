@@ -1,4 +1,12 @@
 var galleries_config = {
+	'headshots' : {
+		'label' : 'Headshots',
+		'images' : [
+			'http://lorempixel.com/960/540/people/?11',
+			'http://lorempixel.com/960/540/people/?12',
+			'http://lorempixel.com/960/540/people/?13'
+		]
+	},
 	'hamlet2012' : {
 		'label' : 'Hamlet',
 		'images' : [
